@@ -14,7 +14,7 @@ class Application(tk.Frame):
         # Instantiate widgets
         self.filePathDisplay = tk.Entry(self)
         self.browseButton = tk.Button(self, text='Browse...', command=browseFile)
-        self.runButton = tk.Button(self, text='Run', fg='white',background='green')
+        self.runButton = tk.Button(self, text='Run', fg='white', background='green')
         self.quitButton = tk.Button(self, text='Quit', fg='white', background='red', command=self.quit)
         self.createWidgets()
 
@@ -25,6 +25,10 @@ class Application(tk.Frame):
         self.runButton.grid(row=1, column=0)
         self.quitButton.grid(row=1, column=3)
 
+    def browseFile():
+        print(Application.filename)
+        foldername = "templates/{}".filename
+        global templatepath = "templates_todeploy/{}".format(foldername)
+        createFolder()
 
-def browseFile():
-    print(Application.filename)
+    def createFolder(templatepath):
